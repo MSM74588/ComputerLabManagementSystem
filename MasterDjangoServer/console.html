@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="0; url=http://example.com"> -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bulma.css">
+    <!-- <script src="https://kit.fontawesome.com/9644532b47.js" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script> -->
+
+    <!-- <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="semantic/dist/semantic.min.js"></script> -->
+
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js" integrity="sha512-dqw6X88iGgZlTsONxZK9ePmJEFrmHwpuMrsUChjAw1mRUhUITE5QU9pkcSox+ynfLhL15Sv2al5A0LVyDCmtUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ==" crossorigin="anonymous" referrerpolicy="no-referrer"/> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+    <title>Lab Control Panel</title>
+</head>
+
+<body>
+
+    <div class="main-container">
+        <div class="grid-container">
+            <div class="left">
+
+                <section class="section">
+                    <h1 class="title "><img src="https://img.icons8.com/metro/26/000000/computer.png" /> Master Console <span class="tag is-warning">Computer Lab</span></h1>
+                    <h3 class="subtitle is-4"><strong>Master IP Address: 192.168.0.1</strong></h3>
+                </section>
+
+
+
+                <section class="section">
+                    <h2 class="subtitle is-3"><img src="https://img.icons8.com/ios-glyphs/50/000000/air-play.png" /> Share Screen <span class="tag is-success">Tools</span></h2>
+                    <p>Share your screen with students</p>
+                    <button class="button is-success">Share Screen</button>
+                </section>
+
+                <section class="section">
+                    <h2 class="subtitle is-3"><img src="https://img.icons8.com/material-sharp/48/000000/link--v1.png" /> Open a Link on all student PCs <span class="tag is-success">Tools</span></h2>
+                    <p>To open a link to a website</p>
+                    <input class="input is-link" type="text" placeholder="Link input">
+                    <a href=""><button class="button is-warning">Execute Command</button></a>
+                </section>
+
+                <section class="section">
+                    <h2 class="subtitle is-3"><img src="https://img.icons8.com/ios/50/000000/powershell.png" /> Execute Powershell command</h2>
+                    <p>Execute a Powershell command <br>Example: <code>chocolatey</code> or <code>git</code> commands </p>
+                    <input class="input is-link" type="text" placeholder="Command input">
+                    <a href=""><button class="button is-warning">Execute Command</button></a>
+                </section>
+
+                <section class="section">
+                    <h2 class="subtitle is-3"><img src="https://img.icons8.com/material-outlined/48/000000/delete-forever.png" /> Delete student files <span class="tag is-danger">Warning</span></h2>
+                    <p>Delete student saved data
+                        <p>
+                            <button class="button is-danger">Execute Command</button>
+                </section>
+
+                <section class="section">
+                    <h2 class="subtitle is-3"><img src="https://img.icons8.com/cotton/64/000000/shutdown--v1.png" /> PowerOff Computers</h2>
+                    <p>Power off all student PCs
+                        <p>
+                            <button class="button is-danger">Shut Down</button>
+                </section>
+
+
+            </div>
+            <div class="right">
+                <!-- console -->
+                <div class="info">
+                    <h3><strong>Information & Suggestion:</strong></h3>
+                    <ol>
+                        <li>
+                            <p>Commands may take 30sec to 2min to execute</p>
+                        </li>
+                        <li>
+                            <p><code>in case of failure</code>: Check wheather the worker script is working or not</p>
+                        </li>
+                        <li>
+                            <p>Use case of Link Opening: share the code to all the student pc using websites like pastebin and sharing or opening a specific video or opening online simulator or open tutorial pages like w3 or tutorialspoint</p>
+                        </li>
+                        <li>
+                            <p>Execute Powershell command: run commands like choco to install a specific software (example: choco install python), for softwares check chocolatey packages site. (for more info on choco packages visit <a href="https://docs.chocolatey.org/en-us/">https://docs.chocolatey.org/en-us/</a>>
+                                and packages visit <a href="https://community.chocolatey.org/packages">https://community.chocolatey.org/packages</a>). Or Git clone a repository on all student computers</p>
+                        </li>
+                        <li>
+                            <p>Useful Tools and Sites: <a href="https://raindrop.io/msm74588/education-12131481">https://raindrop.io/msm74588/education-12131481</a> & <a href="https://raindrop.io/msm74588/online-tools-and-important-websites-12132189">https://raindrop.io/msm74588/online-tools-and-important-websites-12132189</a></p>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
