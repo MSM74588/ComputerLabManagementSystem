@@ -8,6 +8,9 @@
     <!-- <meta http-equiv="refresh" content="0; url=http://example.com"> -->
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="bulma.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Toastify JS -->
+
     <!-- <script src="https://kit.fontawesome.com/9644532b47.js" crossorigin="anonymous"></script> -->
     <!-- <script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script> -->
 
@@ -44,14 +47,14 @@
                     <h2 class="subtitle is-3"><img src="https://img.icons8.com/material-sharp/48/000000/link--v1.png" /> Open a Link on all student PCs <span class="tag is-success">Tools</span></h2>
                     <p>To open a link to a website</p>
                     <input class="input is-link" type="text" placeholder="Link input">
-                    <a href=""><button class="button is-warning">Execute Command</button></a>
+                    <button class="button is-warning">Execute Command</button>
                 </section>
 
                 <section class="section">
                     <h2 class="subtitle is-3"><img src="https://img.icons8.com/ios/50/000000/powershell.png" /> Execute Powershell command</h2>
                     <p>Execute a Powershell command <br>Example: <code>chocolatey</code> or <code>git</code> commands </p>
                     <input class="input is-link" type="text" placeholder="Command input">
-                    <a href=""><button class="button is-warning">Execute Command</button></a>
+                    <button class="button is-warning">Execute Command</button>
                 </section>
 
                 <section class="section">
@@ -62,7 +65,7 @@
                 </section>
 
                 <section class="section">
-                    <h2 class="subtitle is-3"><img src="https://img.icons8.com/cotton/64/000000/shutdown--v1.png" /> PowerOff Computers</h2>
+                    <h2 class="subtitle is-3"><img src="https://img.icons8.com/cotton/64/000000/shutdown--v1.png" /> ShutDown Computers <span class="tag is-danger is-light">Power</span></h2>
                     <p>Power off all student PCs
                         <p>
                             <button class="button is-danger">Shut Down</button>
@@ -96,6 +99,24 @@
             </div>
         </div>
     </div>
+    <script>
+        $("button").click(function() {
+            Toastify({
+                text: "⚠️ Processing Command...",
+                duration: 5000,
+                // destination: "https://github.com/apvarun/toastify-js",
+                // newWindow: true,
+                close: false,
+                gravity: "top", // `top` or `bottom`
+                position: "right", // `left`, `center` or `right`
+                backgroundColor: "linear-gradient(to right, #ff5858, #f09819)",
+                stopOnFocus: false, // Prevents dismissing of toast on hover
+                onClick: function() {} // Callback after click
+            }).showToast();
+        })
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+
 </body>
 
 </html>
