@@ -24,8 +24,7 @@ MSG = message protocol
 
 
 
-client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(ADDR) #instead of bind here we are using connect as of server
+# client.connect(ADDR) #instead of bind here we are using connect as of server
 
 
 def send(msg):
@@ -46,15 +45,31 @@ def send(msg):
 
 ######################## main #############################3
 STAY_CONNECTED = True
+client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+
 while STAY_CONNECTED:
-    print("Input Messages:")
-    custommessage = input()
+
+    def inputdatahandler():
+        while True:
+            try:
+                print("Input Messages:")
+                custommessage = input()
+                
+                ##Disconnect msg    
+                if custommessage == "/disconnect":
+                    name = Prompt.ask("Disconnect from server?", choices=["y", "n"])
+                    send(DISCONNECT)
+                    print("Disconected from SERVER")
+                    quit() #Exits the program
+                else:
+                    send(custommessage) #send function processes the msg and sends
+            except ValueError:
+                break
+
     
-    ##Disconnect msg    
-    if custommessage == "/disconnect":
-        name = Prompt.ask("Disconnect from server?", choices=["y", "n"])
-        send(DISCONNECT)
-        print("Disconected from SERVER")
-        quit() #Exits the program
-    else:
-        send(custommessage) #send function processes the msg and sends
+    try:
+        client.connect(ADDR)
+        inputdatahandler()
+    except ValueError:
+        print("error!")
+
